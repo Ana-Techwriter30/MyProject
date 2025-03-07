@@ -1,0 +1,33 @@
+openapi: 3.0.3
+info: 
+  title: Easyshops Products API definition
+  description: using this OAS any consumer can understand API
+  termsOfService: https://easyshop.com/terms/
+  contact: 
+    name: API Support
+    url: https://easyshop.com/support
+    email: support@easyshop.com
+  license:
+    name: Easyshop 2.0
+    url: https://easyshop.com/licenses/LICENSE-2.0.html
+  version: 0.0.1
+servers:
+  - url: https://development.easyshop-server.com/v1
+    description: Development Server
+  - url: https://staging.easyshop-server.com/v1
+    description: Staging Server
+  - url: https://api.easyshop-server.com/v1
+    description: Prod Server
+  - url: hhtps://{username}.server.com/{port}/{version}
+    variables: 
+      username: 
+        default: demo
+        description: value assigned by service provider
+      port:
+        enum:
+          - "8443"
+          - "443"
+        default: "8443"
+      version:
+        default: v1
+paths: {}
